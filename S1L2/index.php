@@ -207,7 +207,7 @@ foreach ($variable as $key => $value) {
 
     // Dalla versione PHP7 è stata introdotta la tipizzazione rigorosa
 
-    declare(strict_types = 1);
+    //declare(strict_types = 1);
     function func3(int $param1 = 2, float $param2) {
         # code...
         return $param1 + $param2;

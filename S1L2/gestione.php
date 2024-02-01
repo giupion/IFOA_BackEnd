@@ -73,7 +73,7 @@
 
 
     // Redirect su altra pagina
-    header('Location: http://localhost/Giorno-2_PHP_Teoria/test.php');
+    header('Location: http://localhost/S1L2/test.php');
 
     
 ?>
