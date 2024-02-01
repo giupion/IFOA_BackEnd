@@ -11,17 +11,23 @@
         $var = 'Mario Rossi';
         echo '<h1>Ciao a tutti</h1>'; 
         echo $var;
+        //dichiarata variabile mario rossi 
+
     ?>
+
 
     <h2><?='Corso php'?></h2>
     <h2><?=$var?></h2>
-
+<!--forma abbreviata pre stampare in php <?=''?>-->
     <?php
         // var_dump($var); // Stampa contenuto e tipo della variabile
 
         // Boolean
         $bool = true;
-        var_dump($bool); 
+       
+        //var dump tipo di dato  e la sua lunghezza 13 caratteri
+        //per visualizzare contenuto e struttura , tipo stringa 13 caratter
+        //var_dump($variable)
         // Number (Int, Float)
         $numInt = 25;
         var_dump($numInt);
@@ -42,12 +48,54 @@
         $name = 'Mario';
         $lastname = 'Rossi';
         $fullname = '<h4>' . $name . ' ' . $lastname . '</h4>';
+        
+        $allenatore1='ash';
+        $allenatore2='misty';
+        $allena='<h4>'. $allenatore1 . " ama " . $allenatore2;
+        
         // print è equivalente ad echo stampa una string a video
         print $fullname;
 
         // Array in PHP
         $arr1 = array();
-        var_dump($arr1);
+        $numArray=array(1,2,3,4,5);
+        $numArray=[1,2,3,4,5];
+        $arrayassoc=array(
+            'chiave1'=>"valore1",
+            'chiave2'=>"valore2",
+        );
+
+        //array multidim
+
+
+        $multi=array(
+            array(1,2,3,),
+            array('a','b','c'),
+            array('x','y','z'));
+
+
+
+
+            //sintassimoderna
+
+            $multi2=[[1,2,3],
+            [4,5,5]];
+
+            //array associativo multidimensionale
+            $assomulti=[
+                'utente1'=>['nome'=>30,'età'=>'25'],
+                'utente2'=>['nome'=>30,'età'=>'25']
+            ];
+            
+        //$arr1 = array('uno', 'due', 'tre');
+        var_dump($arr1);/*array(3) {tipo array tre lunghezza
+            [0]=> chiave indice 0 stringa tre caratteri
+            string(3) "uno"
+            [1]=>
+            string(3) "due"
+            [2]=>
+            string(3) "tre"
+          }*/
         $arr2 = [];
         var_dump($arr2);
 
@@ -58,7 +106,20 @@
         $arr2[10] = 'altro'; // Aggiunge un elemento nell'indice 10
         $arr2[] = 'nuovo'; // Aggiunge un elemento in coda
         $arr2['pippo'] = 'Ciao sono Pippo';  // Aggiunge un elemento nell'indice pippo
-
+/*array(5) {
+  [0]=>
+  string(3) "uno"
+  [1]=>
+  string(3) "due"
+  [2]=>
+  string(3) "tre"
+  [10]=> all'indice 10 lo mette anche se non esiste l ocrea
+  string(5) "altro"
+  [11]=>
+  string(5) "nuovo" è un push e lo mette in coda
+  ["pippo"]=>
+  string(16) "Ciao sono Pippo" //pippo lo mete all'ultimo
+}*/
         print '<p>' . $arr2[1] . '</p>';
         echo '<p>' . $arr2[2] . '</p>';
 
@@ -84,7 +145,8 @@
         $matrix = ['Nomi' => [5, 3], 'Citta' => [4, 6, 9], 'Cose' => [4, 6, 9]];
 
         // Esempio ciclo for
-        echo '<ul>';
+        //stampa gli indici...perche matrix count è 3
+        echo '<ul>'; //se ci sono 3 chiavi count sarà 3 ma il primo si chiama 0
         for($i=0; $i < count($matrix); $i++) {
             echo '<li>Sono il valore ' . $i . '</li>';
         }
@@ -93,8 +155,8 @@
         // Esempio ciclo foreach
         $mioArr = ['abc' => 25, 'fge' => 49];
 
-        foreach ($mioArr as $key => $value) {
-            echo '<li>Sono il valore di ' . $key . ' => ' . $value . '</li>';
+        foreach ($mioArr as $bom => $bim) {
+            echo '<li>Sono il valore di ' . $bom . ' => ' . $bim . '</li>';
         }
 
         if(count($mioArr) > 0 ) {

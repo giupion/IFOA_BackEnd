@@ -213,13 +213,13 @@ foreach ($variable as $key => $value) {
         return $param1 + $param2;
     }
 
-    func3(5, 25);
+    func3(5, 25); //tipizzazone variabili a posto di 2 metto 5 int e gloat somma fa 30
 
     function func4(int ...$args) {
         # code...
         print_r($args);
     }
-    func4(5, 25, 46, 5);
+    func4(5, 25, 46, 5); //parametri variabili
 
     // Dalla versione PHP8 possiamo assegnare il nome ad un parametro
     function func5(int $param1 = 25, float $param2) {
@@ -227,7 +227,7 @@ foreach ($variable as $key => $value) {
         return $param1 + $param2;
     }
     
-    func5(param2: 25);
+    func5(param2: 25); //assegnazione nome parametro fa 50
 
     //func6(); Errore!!!
     // Funzioni espressione in PHP
@@ -251,7 +251,7 @@ foreach ($variable as $key => $value) {
     $miaFunc();
 
     function miaFunc2() {
-        global $name;
+        global $name; //per accedere a name fuori dalla funzione è sopra name
         echo 'Ciao da ' . $name;
     };
 
@@ -260,9 +260,12 @@ foreach ($variable as $key => $value) {
     function miaFunc3() {
         echo 'Ciao da ' . $GLOBALS['name'];
     };
-
+//array associativo per accedere  a tutte le variabili globali
     $miaFunc3();
-?>
 
+    //metodi php casi d'uso e pro e contro
+
+    
+?>
 
 
