@@ -55,7 +55,7 @@
 
     session_write_close();
 
-    header('Location: http://localhost/S1L3/Esercizio/');
+    
 
     // Invia una mail di conferma
 
@@ -71,7 +71,7 @@
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'sandbox.smtp.mailtrap.io';             //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -101,7 +101,8 @@
 
 
 
-
+    //header('Location: http://localhost/S1L3/Esercizio/');
+    exit(header('Location: http://localhost/S1L3/Esercizio/'));
     
 
 ?>
